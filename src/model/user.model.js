@@ -8,16 +8,18 @@ const UserSchema = new Schema({
       type: String,
       required: true,
     },
-    title: {
-      type: String,
+    isAdmin: {
+      type: Boolean,
       required: true,
-      enum: Title,
+      default: false,
     },
     email: {
       type: String,
       required: true,
       unique: true,
     },
+    subject:{      type: String,
+        required: true,},
     password: {
       type: String,
       required: true,
